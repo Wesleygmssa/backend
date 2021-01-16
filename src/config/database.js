@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const url = 'mongodb://localhost:27017/todo';
-mongoose.connect(url, { useUnifiedTopology: true, useNewUrlParser: true });
+const uri = 'mongodb://localhost:27017/todo';
+mongoose.connect(uri, { useFindAndModify: false });
 
 module.exports = mongoose;
 
