@@ -13,6 +13,9 @@ router.delete('/task/:id', TaskController.delete);
 router.put('/task/:id/:done', TaskController.done); // tarefa concluida ou não concluida
 
 router.get('/task/filter/all', MacaddressValidation, TaskController.all); // todas as tarefas
-router.get('/task/filter/late', MacaddressValidation, TaskController.late); // Tarefas atrazdas
+router.get('/task/filter/late', MacaddressValidation, TaskController.late);
+router.get('/task/filter/today', MacaddressValidation, TaskController.today);
+router.get('/task/filter/week', MacaddressValidation, TaskController.week);
+router.get('/task/filter/month', MacaddressValidation, TaskController.month);
 
 module.exports = router;
